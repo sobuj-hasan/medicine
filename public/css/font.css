@@ -1,0 +1,18 @@
+/* open sans font */
+
+@font-face {
+    font-family: LEMONMILK-Light;
+    src: url(../webfonts/font/LEMONMILK-Light.otf);
+  }
+
+  @font-face {
+    font-family: LEMONMILK-Medium;
+    src: url(../webfonts/font/LEMONMILK-Medium.otf);
+  }
+
+  @font-face {
+    font-family: Lobster-Regular;
+    src: url(../webfonts/font/Lobster-Regular.ttf);
+  }
+
+  

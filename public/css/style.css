@@ -1,0 +1,635 @@
+
+.sec-1{
+ background-color: black;
+ padding: 20px;
+ }
+
+ 
+  .sec-1 .nav-link {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0px 40px;
+  }
+
+  .sec-1 .nav-link:hover {
+   background-color: black;
+   color: white !important;
+  }
+
+
+
+  .sec-1 img{
+    height: 100px;
+  }
+
+  .sec-1 .navbar{
+    border-radius: 20px;
+   
+  }
+
+/* sec-1 end */
+
+
+/* sec-2 start */
+
+
+
+.sec-2 img{
+
+height: 600px;
+width: 100%;
+
+
+}
+/* sec-2 end */
+
+/* sec-3 start */
+
+.sec-3{
+  padding: 50px;
+  background-color: antiquewhite;
+}
+
+.sec-3 h1{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.sec-3 p{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sec-3 p span{
+  font-size: 25px;
+  color: chocolate;
+}
+
+
+.sec-3newdesign{
+  padding: 5px;
+  background-color: pink;
+}
+
+
+/* sec-3 end */
+
+/* sec-4- start */
+
+.sec-4{
+  padding: 50px;
+}
+
+
+.sec-4-box{
+  background-image: url(../img/banner/bnr-5.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 200px;
+  text-align: center;
+  box-shadow: 2px 2px 2px 2px black;
+  border: 2px solid green;
+  width: 100%;
+  height: auto;
+}
+
+.box-5{
+  background-image: url(../img/banner/bnr-4.jpg);
+}
+
+@media only screen and  (max-width: 776px) {
+  .sec-4-box {
+  padding: 50px;
+  }
+}
+
+
+
+
+.sec-4-box button{
+ padding: 10px 20px;
+ background-color: black;
+ color: white;
+  text-align: center;
+  box-shadow: 2px 2px 2px 2px black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
+.sec-4-box a{
+
+  color: white;
+  text-decoration: none;
+ 
+ }
+ 
+ 
+
+
+
+
+
+.sec-4-box-2 img{
+  box-shadow: 2px 2px 2px 2px black;
+  width: 100%;
+  height: auto;
+  border: 2px solid green;
+}
+
+/* sec-4 end */
+
+
+
+/* sec-5 start */
+
+.sec-5{
+  padding: 50px;
+}
+
+.sec-5 h1{
+  font-size: 50px;
+  padding: 20px;
+  font-weight: 600;
+
+}
+
+@media only screen and  (max-width: 776px) {
+  .sec-5 h1 {
+    font-size: 40px;
+  }
+}
+
+.sec-5 h2{
+  font-size: 30px;
+  padding: 20px;
+  font-weight: 600;
+  color: blue;
+  
+}
+
+.sec-5 p{
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 600;
+  
+}
+.sec-5 p span{
+color: brown;
+  
+}
+
+
+/* sec-5 end */
+
+/* sec-6 */
+
+.sec-6{
+  padding: 50px;
+}
+
+
+.sec-6 h1{
+  font-size: 30px;
+  font-weight: 600;
+  color: palevioletred;
+}
+
+
+.sec-6 p{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ftrwhtsap img{
+  height: auto;
+  width: 100px;
+
+}
+
+
+/* sec-6 */
+
+/* shop start */
+
+.shop{
+  padding: 50px;
+}
+
+
+.shop img{
+  padding: 20px 20px;
+  box-shadow: 2px 2px 2px 2px black;
+  margin: 10px;
+  height: 400px;
+  width: 100%;
+}
+
+
+/* shop end */
+
+
+/* aboutpage start */
+
+.aboutpage{
+  padding: 100px;
+  text-align: center;
+
+  
+}
+
+
+.aboutpage h1{
+font-size: 50px;
+font-weight: 600;
+padding: 10px;
+}
+
+.aboutpage p{
+  font-size: 20px;
+  font-weight: 600;
+  }
+  
+
+
+/* aboutpage end */
+
+
+/* contactpage start */
+
+
+.contactpage {
+ padding: 100px;
+}
+
+.contactpage h1{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  background-color: pink;
+}
+
+
+.contactpage label{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+
+
+}
+
+
+.contactpage input{
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  box-shadow: 2px 2px 2px 2px pink;
+}
+
+.contactpage textarea{
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  box-shadow: 2px 2px 2px 2px pink;
+  margin: 10px 0px;
+}
+
+.contactpage button{
+  font-size: 30px;
+  font-weight: 600;
+  background-color: pink;
+  text-align: center;
+  width: 100%;
+}
+
+/* contactpage end */
+
+/* productdetailsbox start */
+
+.productdetails{
+  padding: 100px;
+}
+
+@media only screen and  (max-width: 776px) {
+  .productdetails {
+   padding: 0px;
+    
+  }
+}
+
+ .productdetailsbox-1 img{
+   height: auto;
+   width: 100%;
+
+ }
+
+ .productdetailsbox-1 p{
+font-size: 20px;
+text-align: center;
+padding: 20px 0px;
+font-weight: 600;
+
+}
+
+ .productdetailsbox-2{
+  background-color: antiquewhite;
+  border: 2px solid black;
+  padding: 20px;
+height: auto;
+}
+
+.productdetailsbox-2 input{
+  background-color: antiquewhite;
+  border: 2px solid black;
+  padding: 10px;
+  color: black;
+  font-size: 30px;
+
+
+}
+
+
+@media only screen and  (max-width: 776px) {
+  .productdetailsbox-2 input {
+    font-size: 15px;
+    
+  }
+}
+
+
+.productdetailsbox-2 h2{
+  font-size: 25px;
+  font-weight: 300;
+  text-align: left;
+
+}
+.productdetailsbox-2 h3{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+
+}
+
+@media only screen and  (max-width: 776px) {
+  .productdetailsbox-2 h3 {
+    font-size: 30px;
+  }
+}
+
+
+
+.productdetailsbox-2 button{
+  font-size: 20px;
+  font-weight: 600;
+ background-color: coral;
+  padding: 10px;
+  width: 100%;
+  margin-top: 20px;
+  color: white;
+
+}
+
+.productdetailsbox-2 h5{
+  font-size: 20px;
+  font-weight: 600;
+  
+  padding: 5px;
+
+}
+
+
+.prodtlsbox{
+  padding: 20px 0px;
+  justify-content: space-around;
+
+}
+
+.prodtlsbox h6{
+font-size: 30px;
+padding: 30px 10px;
+background-color: black;
+color: white;
+
+}
+
+@media only screen and  (max-width: 776px) {
+  .prodtlsbox h6 {
+    font-size: 16px;
+    padding: 16px 10px;
+    
+  }
+}
+
+@media only screen and  (max-width: 448px) {
+  .prodtlsbox h6 {
+    font-size: 16px;
+    padding: 16px 0px;
+    
+  }
+}
+
+
+.prodtlsbox img{
+  width: 100px;
+  height: 100px;
+  
+  }
+
+  @media only screen and  (max-width: 776px) {
+    .prodtlsbox img {
+     width: 50px;
+     height: 50px;
+      
+    }
+  }
+
+
+  @media only screen and  (max-width: 448px) {
+    .prodtlsbox img {
+     width: 48px;
+     height: 50px;
+      
+    }
+  }
+
+
+  
+  .cldgn img{
+    height: 50px;
+  }
+
+  .adcartbox h5{
+    font-size: 20px;
+    padding: 30px 5px;
+  }
+
+
+  @media only screen and  (max-width: 776px) {
+    .adcartbox h5 {
+      font-size: 15px;
+      padding: 0px 3px;;
+    }
+  }
+  
+  
+/* productdetailsbox-1 end */
+
+
+/* paymentpage */
+
+.paymentpage{
+  padding: 100px 0px;
+
+}
+
+.prodtlsbox{
+  background-color: pink;
+}
+
+
+
+.paymentpage h1{
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 20px 0px;
+}
+
+
+.paymentpage label{
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 13px;
+}
+
+
+.paymentpage input{
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.paymentbox-1{
+  border: 2px solid black;
+  padding: 10px;
+ 
+}
+
+.paymentbowbtn{
+  padding: 50px;
+  background-color: palevioletred;
+}
+
+.paymentbowbtn h1{
+  padding: 20px 0px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.paymentbowbtn h1 span{
+  padding: 20px 0px;
+  font-size: 30px;
+  font-weight: 600;
+  color: brown;
+}
+
+.paymentbowbtn button{
+  padding: 5px 5px;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(9, 51, 241);
+}
+
+
+
+/* paymentpage */
+
+
+
+/* pop up */
+
+.popup .overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: palevioletred;
+  width: 450px;
+  height: 220px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.popup .close-btn{
+  cursor: pointer;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   width: 30px;
+   height: 30px;
+   background: #222;
+   color: #fff;
+   font-size: 25px;
+   font-weight: 600;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 50%;
+
+}
+
+
+.popup.active .overlay {
+
+display: block;
+
+}
+
+.popup.active .content{
+
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.popup h1{
+  font-size: 50px !important;
+  font-weight: 600;
+
+}
+.popup p{
+  font-size: 30px !important;
+  font-weight: 600;
+  padding: 50px 0px;
+  
+}
+
+
+/* popup */
+
