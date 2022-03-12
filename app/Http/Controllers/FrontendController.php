@@ -9,6 +9,7 @@ use App\Models\Subscribe;
 use Illuminate\Http\Request;
 use App\Models\ContactFormSubmit;
 use App\Models\ContactProperty;
+use App\Models\NewArrival;
 use App\Models\Property;
 use App\Models\Service;
 use Idemonbd\Notify\Facades\Notify;
@@ -17,21 +18,27 @@ use Illuminate\Support\Facades\Auth;
 class FrontendController extends Controller
 {
     public function index(){
-        $data['properties'] = Property::where('status', 1)->latest()->limit(20)->get();
-        $data['services'] = Service::where('status', 1)->get();
-        return view('index', $data);
+        return view('index');
     }
 
     public function newarrivals(){
-        return view('new_arrivals');
+        $data['new_arrivals'] = NewArrival::where('status', 1)->inRandomOrder()->limit(80)->get();
+        return view('new_arrivals', $data);
+    }
+
+    public function arrivalsdetails(Request $request, $id){
+        $data['singleproduct'] = NewArrival::where('id', $id)->firstOrFail();
+        return view('arrivals_details', $data);
     }
 
     public function shop(){
-        return view('shop');
+        $data['products'] = Service::where('status', 1)->inRandomOrder()->limit(80)->get();
+        return view('shop', $data);
     }
     
-    public function productdetails(){
-        return view('product_details');
+    public function productdetails(Request $request, $id){
+        $data['singleproduct'] = Service::where('id', $id)->firstOrFail();
+        return view('product_details', $data);
     }
 
     public function aboutus(){
@@ -52,90 +59,6 @@ class FrontendController extends Controller
     
     public function payment(){
         return view('payment');
-    }
-
-    public function admltiplunt(){
-        return view('admltiplunt');
-    }
-    public function adprprtyuniqftr(){
-        return view('add_property_uniq_qftr');
-    }
-    public function advertisement(){
-        return view('advertisement');
-    }
-    public function creatlisting(){
-        $data['categories'] = Category::all();
-        return view('create_listing', $data);
-    }
-
-    public function creatlisting_post(Request $request){
-        
-        $request->validate([
-            'category_id' => 'required',
-            'location' => 'required',
-            'min_price' => 'required',
-            'max_price' => 'required',
-            'bedroom' => 'required',
-            'master_bedroom' => 'required',
-            'bathroom' => 'required',
-            'varanda' => 'required',
-            'servent_room' => 'required',
-            'parking' => 'required',
-            'lift' => 'required',
-            'guard' => 'required',
-        ]);
-        $request->validate([
-            'category_id' => 'required',
-            'location' => 'required',
-            'min_price' => 'required',
-            'max_price' => 'required',
-            'bedroom' => 'required',
-            'master_bedroom' => '',
-            'bathroom' => 'required',
-            'varanda' => '',
-            'servent_room' => '',
-            'parking' => '',
-            'lift' => '',
-            'guard' => '',
-        ]);
-        Consultant::create($request->all() + [
-            'user_id' => Auth::user()->id,
-            'status' => 1,
-        ]);
-        Notify::success('Your Consultant/House rent apllication submited, Updates will be notified by Phone or email.', 'Success');
-        return back();
-
-    }
-
-    public function delete(){
-        return view('delete');
-    }
-    public function donebtn(){
-        return view('done_btn');
-    }
-    public function editdetails(){
-        return view('edit_details');
-    }
-    public function faq(){
-        return view('faq');
-    }
-    public function inbox(){
-        return view('inbox');
-    }
-    public function myproperty(){
-        $data['myproperties'] = Property::where('user_id', Auth::user()->id)->get();
-        return view('myproperty', $data);
-    }
-    public function paymentdetails(){
-        return view('payment_details');
-    }
-    public function paymentregister(){
-        return view('payment_register');
-    }
-    public function viewmore()
-    {
-        $data['properties'] = Property::where('status', 1)->latest()->limit(60)->get();
-        return view('view_more', $data);
     }
 
     public function searchResult(Request $request)

@@ -34,63 +34,27 @@
     <div class="container">
         <h1 class="text-center mb-3">New Arrivals</h1>
         <div class="row">
-            <div class="col-lg-4 my-4">
-                <div class="sec-4-box-2">
-                    <div class="product">
-                        <a href="#">
-                            <img src="{{ asset('img/banner/newarival-2.png') }}" alt="">
-                        </a>
-                        <div class="product-text text-center">
-                            <a href="#">
-                                <h4 class="mt-2">Product Name</h4>
+            @foreach ($new_arrivals as $new_arrival)
+                <div class="col-lg-4 my-4">
+                    <div class="sec-4-box-2">
+                        <div class="product">
+                            <a href="{{ route('arrivals.details', $new_arrival->id) }}">
+                                <img src="{{ asset('assets/img/') }}/{{ $new_arrival->image }}" alt="">
                             </a>
-                            <h4><strong>50 ৳</strong></h4>
-                            <div class="btn my-3">
-                                <a href="">Add to Cart</a>
-                                <a href="">Buy Now</a>
+                            <div class="product-text text-center">
+                                <a href="{{ route('arrivals.details', $new_arrival->id) }}">
+                                    <h4 class="mt-2">{{ $new_arrival->medicine_name }}</h4>
+                                </a>
+                                <h4><strong>{{ $new_arrival->price }} $</strong></h4>
+                                <div class="btn my-3">
+                                    <a href="{{ route('arrivals.details', $new_arrival->id) }}">Add to Cart</a>
+                                    <a href="{{ route('arrivals.details', $new_arrival->id) }}">Buy Now</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 my-4">
-                <div class="sec-4-box-2">
-                    <div class="product">
-                        <a href="#">
-                            <img src="{{ asset('img/banner/newarival-2.png') }}" alt="">
-                        </a>
-                        <div class="product-text text-center">
-                            <a href="#">
-                                <h4 class="mt-2">Product Name</h4>
-                            </a>
-                            <h4><strong>50 ৳</strong></h4>
-                            <div class="btn my-3">
-                                <a href="">Add to Cart</a>
-                                <a href="">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 my-4">
-                <div class="sec-4-box-2">
-                    <div class="product">
-                        <a href="#">
-                            <img src="{{ asset('img/banner/newarival-2.png') }}" alt="">
-                        </a>
-                        <div class="product-text text-center">
-                            <a href="#">
-                                <h4 class="mt-2">Product Name</h4>
-                            </a>
-                            <h4><strong>50 ৳</strong></h4>
-                            <div class="btn my-3">
-                                <a href="">Add to Cart</a>
-                                <a href="">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     </div>

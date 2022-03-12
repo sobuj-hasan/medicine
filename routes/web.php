@@ -12,8 +12,9 @@ Route::get('/dashboard', function () {
     // Fontend Controller Routes
     Route::get('/', [FrontendController::class, 'index'])->name('index');
     Route::get('new/arrivals', [FrontendController::class, 'newarrivals'])->name('new.arrivals');
+    Route::get('arrivals/details/{id}', [FrontendController::class, 'arrivalsdetails'])->name('arrivals.details');
     Route::get('shop', [FrontendController::class, 'shop'])->name('shop');
-    Route::get('product/details', [FrontendController::class, 'productdetails'])->name('product.details');
+    Route::get('product/details/{id}', [FrontendController::class, 'productdetails'])->name('product.details');
     Route::get('aboutus', [FrontendController::class, 'aboutus'])->name('aboutus');
     Route::get('contactus', [FrontendController::class, 'contactus'])->name('contactus');
     Route::get('privacy/policy', [FrontendController::class, 'privacy_policy'])->name('privacy.policy');
