@@ -56,7 +56,7 @@
         }
         .login-card button {
             border: none;
-            background: #652d90;
+            background: #336699;
             height: 50px;
             width: 83%;
             margin-left: 0px;
@@ -123,7 +123,7 @@
         }
         .signin-card button {
             border: none;
-            background: #652d90;
+            background: #336699;
             height: 50px;
             width: 88%;
             margin-left: 0px;

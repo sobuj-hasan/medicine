@@ -63,7 +63,7 @@
             </div>
             <div class="col-lg-6">
                <div class="sec-4-box box-5">
-                  <button><a href="#">Shop Now</a></button>
+                  <button><a href="{{ route('shop') }}">Shop Now</a></button>
                </div>
             </div>
             {{-- <div class="col-lg-6">
