@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
-                    <h4 class="page-title float-left">Medicine Details</h4>
+                    <h4 class="page-title float-left">New Arrivals Medicine Details</h4>
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="">Medicine Details</a></li>
+                        <li class="breadcrumb-item"><a href="">New Arrivals Medicine Details</a></li>
                     </ol>
 
                     <div class="clearfix"></div>

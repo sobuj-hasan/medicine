@@ -1,15 +1,15 @@
 @extends('admin.layouts.app')
-@section('title',' Medicine list')
+@section('title',' New Arrivals Medicine list')
 @section('content')
 
  <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
-                    <h4 class="page-title float-left">Services </h4>
+                    <h4 class="page-title float-left">New Arrivals Medicine </h4>
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="">Medicine List</a></li>
+                        <li class="breadcrumb-item"><a href="">New Arrivals Medicine List</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -44,7 +44,7 @@
                                         </td>
 
                                         <td>
-                                            <a href="{{ route('service.show',$service->id) }}">{{ Str::limit($service->medicine_name, 45, $end='...') }}</a>
+                                            <a href="{{ route('newarrivals.show',$service->id) }}">{{ Str::limit($service->medicine_name, 45, $end='...') }}</a>
                                         </td>
 
                                         <td>
@@ -59,11 +59,11 @@
                                             {{ $service->created_at->diffForHumans() }}
                                         </td>
 
-                                        <form method="POST" action="{{ route('service.destroy', $service->id) }}">
+                                        <form method="POST" action="{{ route('newarrivals.destroy', $service->id) }}">
                                             @csrf
                                             @method('DELETE')
                                             <td>
-                                                <a href="{{ route('service.edit', $service->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
+                                                <a href="{{ route('newarrivals.edit', $service->id) }}" class="table-action-btn"> <i class="far fa-edit"></i> </a>
                                                 <button onclick="blogDelete()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                             </td>
                                         </form>

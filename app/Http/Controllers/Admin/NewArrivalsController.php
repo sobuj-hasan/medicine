@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Carbon\Carbon;
-use App\Models\Service;
+use App\Models\NewArrival;
 use Illuminate\Http\Request;
 use Idemonbd\Notify\Facades\Notify;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
-class ServiceController extends Controller
+class NewArrivalsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +18,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $data['services'] = Service::where('status', 1)->get();
-        return view('admin.services.index', $data);
+        $data['services'] = NewArrival::where('status', 1)->get();
+        return view('admin.new_arrivals.index', $data);
     }
 
     /**
@@ -30,7 +29,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('admin.services.create');
+        return view('admin.new_arrivals.create');
     }
 
     /**
@@ -49,7 +48,7 @@ class ServiceController extends Controller
             'image' => 'required|image',
         ]);
 
-        $services = Service::create($request->except('_token', 'image') + [
+        $services = NewArrival::create($request->except('_token', 'image') + [
             'user_id' => Auth::user()->id,
             'status' => 1,
         ]);
@@ -59,12 +58,12 @@ class ServiceController extends Controller
             $location = 'assets/img/' . $photo_name;
 
             Image::make($photo)->resize(380, 310)->save($location);
-            Service::find($services->id)->update([
+            NewArrival::find($services->id)->update([
                 'image' => $photo_name,
             ]);
         }
         Notify::success('Created a new Medicine !', 'Success');
-        return redirect()->route('service.index');
+        return redirect()->route('newarrivals.index');
     }
 
     /**
@@ -75,8 +74,8 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $data['single_service'] = Service::where('id', $id)->firstOrFail();
-        return view('admin.services.show', $data);
+        $data['single_service'] = NewArrival::where('id', $id)->firstOrFail();
+        return view('admin.new_arrivals.show', $data);
     }
 
     /**
@@ -87,8 +86,8 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        $data['single_service'] = Service::where('id', $id)->firstOrFail();
-        return view('admin.services.edit', $data);
+        $data['single_service'] = NewArrival::where('id', $id)->firstOrFail();
+        return view('admin.new_arrivals.edit', $data);
     }
 
     /**
@@ -108,7 +107,7 @@ class ServiceController extends Controller
             'image' => '',
         ]);
 
-        $services = Service::find($id);
+        $services = NewArrival::find($id);
         $input = $request->except('_token', 'image', '_method');
 
         if ($request->hasFile('image')) {
@@ -126,7 +125,7 @@ class ServiceController extends Controller
         $services->fill($input)->save();
 
         Notify::success('Medicine Updated Successfully!');
-        return redirect()->route('service.index');
+        return redirect()->route('newarrivals.index');
     }
 
     /**
@@ -137,7 +136,7 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        Service::where('id', $id)->first()->delete();
+        NewArrival::where('id', $id)->first()->delete();
         Notify::error('This Medicine Deleted', 'Deleted');
         return back();
     }

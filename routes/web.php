@@ -36,22 +36,23 @@ Route::get('/dashboard', function () {
     // Route::get('blog/details/{slug}', [FrontendController::class, 'blogdetails'])->name('blog.details');
 
     // Dashboard Routes
-    Route::group(
-        ['namespace' => 'User', 'middleware' => 'auth'],
-        function () {
-            Route::get('dashboard', 'UserDashboardController@index')->name('dashboard.index');
-            Route::get('user/logout', 'UserDashboardController@logout')->name('user.logout');
-            Route::resources([
 
-            ]);
+    // Route::group(
+    //     ['namespace' => 'User', 'middleware' => 'auth'],
+    //     function () {
+    //         Route::get('dashboard', 'UserDashboardController@index')->name('dashboard.index');
+    //         Route::get('user/logout', 'UserDashboardController@logout')->name('user.logout');
+    //         Route::resources([
 
-            Route::get('user/profile', 'UserProfileController@index')->name('user.profile');
-            Route::get('user/profile/edit', 'UserProfileController@edit')->name('user.profile.edit');
-            Route::post('user/profile/update', 'UserProfileController@update')->name('user.profile.update');
-            Route::get('user/setting', 'UserProfileController@setting')->name('user.setting');
-            Route::post('user/setting/update', 'UserProfileController@changepassword')->name('user.setting.update');
-        }
-    );
+    //         ]);
+
+    //         Route::get('user/profile', 'UserProfileController@index')->name('user.profile');
+    //         Route::get('user/profile/edit', 'UserProfileController@edit')->name('user.profile.edit');
+    //         Route::post('user/profile/update', 'UserProfileController@update')->name('user.profile.update');
+    //         Route::get('user/setting', 'UserProfileController@setting')->name('user.setting');
+    //         Route::post('user/setting/update', 'UserProfileController@changepassword')->name('user.setting.update');
+    //     }
+    // );
 
 
     // Admin panel Routes
@@ -63,12 +64,13 @@ Route::get('/dashboard', function () {
             'categories' => 'CategoryController',
             'users' => 'UserController',
             'service' => 'ServiceController',
-            'blogcategories' => 'BlogCategoryController',
-            'blogs' => 'BlogController',
-            'admin/subscriber' => 'SubscribeController',
-            'admin/visitor/querstion' => 'VisitorQueryController',
-            'properties' => 'PropertyController',
-            'consultant/request' => 'RentConsultantController',
+            'newarrivals' => 'NewArrivalsController',
+            // 'blogcategories' => 'BlogCategoryController',
+            // 'blogs' => 'BlogController',
+            // 'admin/subscriber' => 'SubscribeController',
+            // 'admin/visitor/querstion' => 'VisitorQueryController',
+            // 'properties' => 'PropertyController',
+            // 'consultant/request' => 'RentConsultantController',
         ]);
 
         Route::get('admin/profile', 'ProfileController@index')->name('admin.user.profile');

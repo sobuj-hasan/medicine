@@ -1,14 +1,14 @@
 @extends('admin.layouts.app')
-@section('title',' Edit Service')
+@section('title',' Edit New Arrivals Medicine')
 @section('content')
  <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
-                    <h4 class="page-title float-left">Edit Service</h4>
+                    <h4 class="page-title float-left">Edit New Arrivals Medicine</h4>
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="">Edit Service</a></li>
+                        <li class="breadcrumb-item"><a href="">Edit New Arrivals Medicine</a></li>
                     </ol>
                     <div class="clearfix"></div>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="modal-header">
                         <h4 class="modal-title">Create Service</h4>
                     </div>
-                    <form method="POST" action="{{ route('service.update', $single_service->id ) }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('newarrivals.update', $single_service->id ) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
                         <div class="modal-body">
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="{{ route('service.index') }}" type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</a>
+                            <a href="{{ route('newarrivals.index') }}" type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</a>
                             <button type="submit" class="btn btn-info waves-effect waves-light">Save Now</button>
                         </div>
                     </form>

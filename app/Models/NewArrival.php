@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class NewArrival extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'user_id',
         'medicine_name',
         'price',
         'return_policy',
-        'image',
         'description',
+        'image',
         'status',
     ];
 
@@ -25,5 +24,5 @@ class Service extends Model
     {
         return $this->belongsTo(User::class);
     }
-
+    
 }

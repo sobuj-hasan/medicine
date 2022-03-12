@@ -137,16 +137,23 @@
                                 </ul>
                             </li> --}}
                             <li>
-                                <a href="javascript: void(0);"><i class="fi-head"></i> <span> Manage Users</span> <span class="menu-arrow"></span></a>
+                                <a href="javascript: void(0);"> <i class="fas fa-users-cog"></i> <span>Our Medicine</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('users.index') }}">View All</a></li>
+                                    <li><a href="{{ route('service.index') }}">View All Medicine</a></li>
+                                    <li><a href="{{ route('service.create') }}">Add New Medicine</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript: void(0);"> <i class="fas fa-users-cog"></i> <span> Our Services</span> <span class="menu-arrow"></span></a>
+                                <a href="javascript: void(0);"> <i class="fa-solid fa-house-medical"></i> <span>New Arrivals</span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{ route('service.index') }}">View All Service</a></li>
-                                    <li><a href="{{ route('service.create') }}">Add New Service</a></li>
+                                    <li><a href="{{ route('newarrivals.index') }}">New Arrivals Medicine</a></li>
+                                    <li><a href="{{ route('newarrivals.create') }}">Add New Arrivals</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);"><i class="fi-head"></i> <span> Manage Users</span> <span class="menu-arrow"></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{ route('users.index') }}">View All</a></li>
                                 </ul>
                             </li>
                             {{-- <li>
