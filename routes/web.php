@@ -20,6 +20,7 @@ Route::get('/dashboard', function () {
     Route::get('privacy/policy', [FrontendController::class, 'privacy_policy'])->name('privacy.policy');
     Route::get('terms/condition', [FrontendController::class, 'terms_condition'])->name('terms.condition');
     Route::get('payment', [FrontendController::class, 'payment'])->name('payment');
+    Route::get('form/submit', [FrontendController::class, 'form_submit'])->name('form.submit');
 
 
     Route::resources([

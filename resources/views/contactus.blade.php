@@ -21,7 +21,7 @@
             <div class="contact-box">
                 <label for="">EMAIL</label>
                 <input type="email" name="email" placeholder="" required>
-                <input type="hidden" name="_next" value="https://sexmedicinebd.com/form_submit.html">
+                <input type="hidden" name="_next" value="https://sexmedicinebd.com/form/submit">
             </div>
             <div class="contact-box">
                 <label for="">PHONE NUMBER</label>
@@ -37,5 +37,4 @@
         </div>
     </div>
     <!-- contact page end -->
-    <!-- contact us end -->
 @endsection
